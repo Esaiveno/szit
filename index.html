@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>马克思学院 - 沙洲职业工学院</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        .news-item {
+            margin-bottom: 1rem;
+        }
+        .top-nav {
+            background-color: #f8f9fa;
+            padding: 0.5rem 0;
+            font-size: 0.9rem;
+        }
+        .main-nav {
+            background-color: #8B0000 !important;
+        }
+        .navbar-nav {
+            margin-left: 2rem;
+        }
+        .nav-item {
+            margin-right: 1rem;
+        }
+        .quick-entry {
+            margin: 2rem 0;
+            background-color: #f8f9fa;
+            padding: 2rem 0;
+        }
+        .quick-entry-item {
+            text-align: center;
+            padding: 1.5rem;
+            transition: all 0.3s;
+            cursor: pointer;
+            background-color: #fff;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .quick-entry-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        .quick-entry-item i {
+            font-size: 2.5rem;
+            color: #8B0000;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        .carousel-item img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+        }
+        .card {
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        .card-header {
+            background-color: #8B0000 !important;
+        }
+        .card-body {
+            padding: 1.5rem;
+        }
+        .card-body a {
+            color: #333;
+        }
+        .card-body a:hover {
+            color: #8B0000;
+        }
+        footer {
+            background-color: #333;
+            margin-top: 3rem;
+        }
+        @media (max-width: 768px) {
+            .carousel-item img {
+                height: 300px;
+            }
+            .navbar-nav {
+                margin-left: 0;
+            }
+            .quick-entry-item {
+                margin-bottom: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 顶部导航 -->
+    <div class="top-nav">
+        <div class="container">
+            <div class="d-flex justify-content-between">
+                <div>欢迎访问马克思学院</div>
+                <div>
+                    <a href="#" class="me-3">VPN登录</a>
+                    <a href="#">信息门户</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 主导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-dark main-nav">
+        <div class="container">
+            <a class="navbar-brand" href="#">马克思学院</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+                    data-bs-target="#navbarNav" aria-label="切换导航菜单">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" href="#">首页</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">学院概况</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">教育教学</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">科学研究</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">师资队伍</a></li>
+                    <li class="nav-item"><a class="nav-link" href="news.html">新闻动态</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 轮播图 -->
+    <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="images/1_1.jpg" class="d-block w-100" alt="马克思学院风采">
+            </div>
+            <div class="carousel-item">
+                <img src="images/4_1.jpg" class="d-block w-100" alt="教学活动">
+            </div>
+            <div class="carousel-item">
+                <img src="images/5_1.jpg" class="d-block w-100" alt="学术讲座">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+    <!-- 快捷入口 -->
+    <div class="quick-entry">
+        <div class="container">
+            <div class="row">
+                <div class="col-6 col-md-3 quick-entry-item">
+                    <i class="bi bi-book"></i>
+                    <h5>理论学习</h5>
+                </div>
+                <div class="col-6 col-md-3 quick-entry-item">
+                    <i class="bi bi-people"></i>
+                    <h5>师资队伍</h5>
+                </div>
+                <div class="col-6 col-md-3 quick-entry-item">
+                    <i class="bi bi-calendar-event"></i>
+                    <h5>学术活动</h5>
+                </div>
+                <div class="col-6 col-md-3 quick-entry-item">
+                    <i class="bi bi-file-text"></i>
+                    <h5>资料下载</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 主要内容区 -->
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-4 col-news">
+                <div class="card">
+                    <div class="card-header bg-danger text-white">
+                        <h5 class="mb-0">学院新闻</h5>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled">
+                            <li class="mb-2">
+                                <a href="#" class="text-decoration-none">马克思主义理论学习研讨会顺利举行</a>
+                                <small class="text-muted d-block">2024-03-12</small>
+                            </li>
+                            <li class="mb-2">
+                                <a href="#" class="text-decoration-none">我院举办"青年学者论坛"系列活动</a>
+                                <small class="text-muted d-block">2024-03-10</small>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 col-news">
+                <div class="card">
+                    <div class="card-header bg-danger text-white">
+                        <h5 class="mb-0">通知公告</h5>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled">
+                            <li class="mb-2">
+                                <a href="#" class="text-decoration-none">关于举办2024年教师培训的通知</a>
+                                <small class="text-muted d-block">2024-03-11</small>
+                            </li>
+                            <li class="mb-2">
+                                <a href="#" class="text-decoration-none">2024年研究生招生简章</a>
+                                <small class="text-muted d-block">2024-03-09</small>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4 col-news">
+                <div class="card">
+                    <div class="card-header bg-danger text-white">
+                        <h5 class="mb-0">学术动态</h5>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled">
+                            <li class="mb-2">
+                                <a href="#" class="text-decoration-none">马克思主义理论前沿问题研讨会</a>
+                                <small class="text-muted d-block">2024-03-08</small>
+                            </li>
+                            <li class="mb-2">
+                                <a href="#" class="text-decoration-none">新时代思政教育创新研究报告</a>
+                                <small class="text-muted d-block">2024-03-07</small>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="bg-dark text-light mt-5 py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p>版权所有 © 2024 沙洲职业工学院马克思学院</p>
+                    <p>地址：江苏省张家港市南新路1号 | 电话：0512-58263915</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html> 
