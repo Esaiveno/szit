@@ -161,6 +161,33 @@
                 opacity: 1;
             }
         }
+
+        /* 添加导航下拉菜单样式 */
+        .dropdown-menu {
+            background-color: #fff;
+            border: none;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            padding: 0.5rem 0;
+            margin-top: 0;
+            border-radius: 4px;
+        }
+
+        .dropdown-item {
+            color: #333;
+            padding: 0.5rem 1.5rem;
+            transition: all 0.3s;
+        }
+
+        .dropdown-item:hover {
+            background-color: #f8f9fa;
+            color: #8B0000;
+            padding-left: 2rem;
+        }
+
+        /* 鼠标悬停时显示下拉菜单 */
+        .nav-item.dropdown:hover .dropdown-menu {
+            display: block;
+        }
     </style>
 </head>
 <body>
@@ -188,11 +215,66 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link active" href="#">首页</a></li>
-                    <li class="nav-item"><a class="nav-link none"  href="about.html">学院概况</a></li>
-                    <li class="nav-item"><a class="nav-link none"  href="#">教育教学</a></li>
-                    <li class="nav-item"><a class="nav-link none"  href="#">科学研究</a></li>
-                    <li class="nav-item"><a class="nav-link none"  href="#">师资队伍</a></li>
-                    <li class="nav-item"><a class="nav-link none"  href="news.html">新闻动态</a></li>
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link none dropdown-toggle" href="about.html" id="navbarDropdown1">
+                            学院概况
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">学院简介</a></li>
+                            <li><a class="dropdown-item" href="#">机构设置</a></li>
+                            <li><a class="dropdown-item" href="#">发展历程</a></li>
+                            <li><a class="dropdown-item" href="#">学院领导</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link none dropdown-toggle" href="#" id="navbarDropdown2">
+                            教育教学
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">本科教育</a></li>
+                            <li><a class="dropdown-item" href="#">研究生教育</a></li>
+                            <li><a class="dropdown-item" href="#">课程建设</a></li>
+                            <li><a class="dropdown-item" href="#">教学改革</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link none dropdown-toggle" href="#" id="navbarDropdown3">
+                            科学研究
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">研究方向</a></li>
+                            <li><a class="dropdown-item" href="#">科研项目</a></li>
+                            <li><a class="dropdown-item" href="#">学术成果</a></li>
+                            <li><a class="dropdown-item" href="#">学术交流</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link none dropdown-toggle" href="#" id="navbarDropdown4">
+                            师资队伍
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">教授团队</a></li>
+                            <li><a class="dropdown-item" href="#">副教授团队</a></li>
+                            <li><a class="dropdown-item" href="#">讲师团队</a></li>
+                            <li><a class="dropdown-item" href="#">人才招聘</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link none dropdown-toggle" href="news.html" id="navbarDropdown5">
+                            新闻动态
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">学院新闻</a></li>
+                            <li><a class="dropdown-item" href="#">通知公告</a></li>
+                            <li><a class="dropdown-item" href="#">学术动态</a></li>
+                            <li><a class="dropdown-item" href="#">媒体报道</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -364,7 +446,7 @@
                         <div class="row">
                             <div class="col-6 col-md-3 mb-3">
                                 <div class="text-center">
-                                    <img src="images/法学院党总支书记姜虹开讲“思政第一课”_1_法学院小课堂～_来自小红书网页版.jpg" alt="课堂照片" class="rounded mb-2" style="width: 100%; height: 160px; object-fit: cover;">
+                                    <img src="images/法学院党总支书记姜虹开讲"思政第一课"_1_法学院小课堂～_来自小红书网页版.jpg" alt="课堂照片" class="rounded mb-2" style="width: 100%; height: 160px; object-fit: cover;">
                                     <h6>思政理论课堂</h6>
                                     <p class="text-muted small">学生积极参与课堂讨论</p>
                                 </div>
@@ -461,6 +543,14 @@
             if (e.key === 'Escape' && modal.style.display === 'block') {
                 closeModal();
             }
+        });
+
+        // 为所有下拉菜单项添加点击事件
+        document.querySelectorAll('.dropdown-item').forEach(item => {
+            item.addEventListener('click', function(e) {
+                e.preventDefault();
+                showModal();
+            });
         });
     </script>
 </body>
