@@ -5,28 +5,148 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>新闻动态 - 马克思学院</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        .top-nav {
+            background-color: #f8f9fa;
+            padding: 0.5rem 0;
+            font-size: 0.9rem;
+        }
+        .main-nav {
+            background-color: #8B0000 !important;
+        }
+        .navbar-nav {
+            margin-left: 2rem;
+        }
+        .nav-item {
+            margin-right: 1rem;
+        }
+        .news-card {
+            transition: transform 0.3s;
+        }
+        .news-card:hover {
+            transform: translateY(-5px);
+        }
+        .news-meta {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        .news-image {
+            height: 200px;
+            object-fit: cover;
+        }
+        @media (max-width: 768px) {
+            .navbar-nav {
+                margin-left: 0;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- 导航栏 -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <!-- 同首页导航 -->
+    <!-- 顶部导航 -->
+    <div class="top-nav">
+        <div class="container">
+            <div class="d-flex justify-content-between">
+                <div>欢迎访问马克思学院</div>
+                <div>
+                    <a href="#" class="me-3">VPN登录</a>
+                    <a href="#">信息门户</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 主导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-dark main-nav">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">马克思学院</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+                    data-bs-target="#navbarNav" aria-label="切换导航菜单">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">首页</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">学院概况</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">教育教学</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">科学研究</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">师资队伍</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="news.html">新闻动态</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
+
+    <!-- 面包屑导航 -->
+    <div class="container mt-3">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">首页</a></li>
+                <li class="breadcrumb-item active">新闻动态</li>
+            </ol>
+        </nav>
+    </div>
 
     <div class="container mt-4">
         <div class="row">
-            <!-- PC端和平板两列，手机端一列 -->
-            <div class="col-12 col-md-6">
-                <div class="card mb-4">
+            <div class="col-12 col-md-6 mb-4">
+                <div class="card news-card">
+                    <img src="images/法学院党总支书记姜虹开讲“思政第一课”_1_法学院小课堂～_来自小红书网页版.jpg" class="card-img-top news-image" alt="新闻图片">
                     <div class="card-body">
-                        <h5 class="card-title">新闻标题1</h5>
-                        <p class="card-text">新闻摘要...</p>
-                        <a href="news-detail.html" class="btn btn-primary">阅读更多</a>
+                        <h5 class="card-title">马克思主义理论学习研讨会顺利举行</h5>
+                        <div class="news-meta mb-2">
+                            <i class="bi bi-calendar3"></i> 2024-03-12
+                            <i class="bi bi-eye ms-3"></i> 156 次浏览
+                        </div>
+                        <p class="card-text">3月12日，我院在图书馆报告厅成功举办了马克思主义理论学习研讨会，来自各院系的专家学者共同探讨马克思主义理论的现代价值...</p>
+                        <a href="news-detail.html" class="btn btn-danger">阅读更多</a>
                     </div>
                 </div>
             </div>
             <!-- 更多新闻卡片 -->
+            <div class="col-12 col-md-6 mb-4">
+                <div class="card news-card">
+                    <img src="img/DAD9891280090E00F347CA11D02_AFFC89D3_16969.jpg" class="card-img-top news-image" alt="新闻图片">
+                    <div class="card-body">
+                        <h5 class="card-title">我院举办"青年学者论坛"系列活动</h5>
+                        <div class="news-meta mb-2">
+                            <i class="bi bi-calendar3"></i> 2024-03-10
+                            <i class="bi bi-eye ms-3"></i> 142 次浏览
+                        </div>
+                        <p class="card-text">为促进青年教师学术交流，提升教学科研水平，我院特别举办了"青年学者论坛"系列活动...</p>
+                        <a href="news-detail.html" class="btn btn-danger">阅读更多</a>
+                    </div>
+                </div>
+            </div>
         </div>
+
+        <!-- 分页 -->
+        <nav aria-label="新闻分页" class="mt-4">
+            <ul class="pagination justify-content-center">
+                <li class="page-item disabled">
+                    <a class="page-link" href="#" tabindex="-1">上一页</a>
+                </li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#">下一页</a>
+                </li>
+            </ul>
+        </nav>
     </div>
+
+    <!-- 页脚 -->
+    <footer class="bg-dark text-light mt-5 py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p>版权所有 © 2025 沙洲职业工学院马克思学院</p>
+                    <p>地址：江苏省张家港市南新路1号 | 电话：0512-58263915</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="js/bootstrap.min.js"></script>
 </body>

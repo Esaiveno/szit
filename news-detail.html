@@ -3,31 +3,223 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>新闻详情 - 马克思学院</title>
+    <title>马克思主义理论学习研讨会顺利举行 - 马克思学院</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        .top-nav {
+            background-color: #f8f9fa;
+            padding: 0.5rem 0;
+            font-size: 0.9rem;
+        }
+        .main-nav {
+            background-color: #8B0000 !important;
+        }
+        .navbar-nav {
+            margin-left: 2rem;
+        }
+        .nav-item {
+            margin-right: 1rem;
+        }
+        .news-content {
+            line-height: 1.8;
+        }
+        .news-meta {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        .news-image {
+            max-width: 100%;
+            margin: 1rem 0;
+        }
+        @media (max-width: 768px) {
+            .navbar-nav {
+                margin-left: 0;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- 导航栏 -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <!-- 同首页导航 -->
-    </nav>
-
-    <div class="container mt-4">
-        <!-- 所有设备均一列 -->
-        <div class="row">
-            <div class="col-12">
-                <h1 class="mb-4">新闻标题</h1>
-                <div class="meta-info mb-4">
-                    <span>发布时间：2024-03-12</span>
-                    <span class="mx-3">作者：管理员</span>
-                </div>
-                <div class="content">
-                    <p>新闻内容...</p>
+    <!-- 顶部导航 -->
+    <div class="top-nav">
+        <div class="container">
+            <div class="d-flex justify-content-between">
+                <div>欢迎访问马克思学院</div>
+                <div>
+                    <a href="#" class="me-3">VPN登录</a>
+                    <a href="#">信息门户</a>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- 主导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-dark main-nav">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">马克思学院</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+                    data-bs-target="#navbarNav" aria-label="切换导航菜单">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">首页</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">学院概况</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">教育教学</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">科学研究</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">师资队伍</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="news.html">新闻动态</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 面包屑导航 -->
+    <div class="container mt-3">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">首页</a></li>
+                <li class="breadcrumb-item"><a href="news.html">新闻动态</a></li>
+                <li class="breadcrumb-item active">新闻详情</li>
+            </ol>
+        </nav>
+    </div>
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-12">
+                <article class="news-detail">
+                    <h1 class="mb-4">马克思主义理论学习研讨会顺利举行</h1>
+                    <div class="news-meta mb-4">
+                        <span><i class="bi bi-calendar3"></i> 发布时间：2025-03-12</span>
+                        <span class="mx-3"><i class="bi bi-person"></i> 作者：马克思学院</span>
+                        <span><i class="bi bi-eye"></i> 浏览次数：156</span>
+                    </div>
+                    <div class="news-content">
+                        <!-- <img src="images/news1.jpg" class="news-image" alt="研讨会现场"> -->
+                        <p>3月12日上午，马克思主义理论学习研讨会在我院图书馆报告厅顺利举行。本次研讨会以"新时代马克思主义理论创新与发展"为主题，来自各院系的专家学者齐聚一堂，共同探讨马克思主义理论的现代价值与实践意义。</p>
+                        <p>会议开幕式上，学院院长发表了热情洋溢的致辞，强调了马克思主义理论研究对于高校思想政治教育工作的重要性。随后，与会专家围绕主题展开了深入研讨，就马克思主义理论与当代中国实际相结合等问题进行了充分交流。</p>
+                        <p>下午的分组讨论环节，与会者就"马克思主义理论教学改革"、"思政课程创新"等专题展开讨论，提出了许多建设性意见。</p>
+                        <p>本次研讨会的成功举办，对提升我院马克思主义理论研究水平、推动思想政治教育工作创新发展具有重要意义。</p>
+                    </div>
+                </article>
+
+                <!-- 上一篇下一篇 -->
+                <div class="d-flex justify-content-between mt-5">
+                    <a href="#" class="btn btn-outline-secondary"><i class="bi bi-arrow-left"></i> 上一篇</a>
+                    <a href="#" class="btn btn-outline-secondary">下一篇 <i class="bi bi-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="bg-dark text-light mt-5 py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p>版权所有 © 2025 沙洲职业工学院马克思学院</p>
+                    <p>地址：江苏省张家港市南新路1号 | 电话：0512-58263915</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
     <script src="js/bootstrap.min.js"></script>
+    <script>
+    // 新闻数据
+    const newsData = {
+        1: {
+            title: "马克思主义理论学习研讨会顺利举行",
+            date: "2025-03-12",
+            author: "马克思学院",
+            views: 156,
+            image: "img/DAD9891280090E00F347CA11D02_AFFC89D3_16969.jpg",
+            content: `
+                <p>3月12日上午，马克思主义理论学习研讨会在我院图书馆报告厅顺利举行。本次研讨会以"新时代马克思主义理论创新与发展"为主题，来自各院系的专家学者齐聚一堂，共同探讨马克思主义理论的现代价值与实践意义。</p>
+                <p>会议开幕式上，学院院长发表了热情洋溢的致辞，强调了马克思主义理论研究对于高校思想政治教育工作的重要性。随后，与会专家围绕主题展开了深入研讨，就马克思主义理论与当代中国实际相结合等问题进行了充分交流。</p>
+                <p>下午的分组讨论环节，与会者就"马克思主义理论教学改革"、"思政课程创新"等专题展开讨论，提出了许多建设性意见。</p>
+                <p>本次研讨会的成功举办，对提升我院马克思主义理论研究水平、推动思想政治教育工作创新发展具有重要意义。</p>
+            `
+        },
+        2: {
+            title: "我院举办"青年学者论坛"系列活动",
+            date: "2025-03-10",
+            author: "马克思学院",
+            views: 142,
+            image: "img/DAD9891280090E00F347CA11D02_AFFC89D3_16969.jpg",
+            content: `
+                <p>为促进青年教师学术交流，提升教学科研水平，我院特别举办了"青年学者论坛"系列活动。本次活动吸引了来自全院各系部的青年教师积极参与。</p>
+                <p>论坛上，青年教师们就各自的研究领域进行了精彩的学术报告，内容涵盖马克思主义理论创新、思想政治教育方法改革等多个方面。</p>
+                <p>通过此次活动，青年教师们互相学习、取长补短，为今后的教学科研工作打下了良好基础。</p>
+            `
+        },
+        3: {
+            title: "学院召开2025年教学工作研讨会",
+            date: "2025-03-08",
+            author: "马克思学院",
+            views: 128,
+            image: "images/重师学子三下乡：学习长征精神_1_伍万里._来自小红书网页版.jpg",
+            content: `
+                <p>3月8日，马克思学院在第一会议室召开了2025年教学工作研讨会。会议就新学期教学工作安排、教学质量提升等议题进行了深入讨论。</p>
+                <p>会议强调要进一步加强教学管理，创新教学方法，提高教学质量。各系部主任分别就本学期工作计划进行了汇报。</p>
+                <p>与会人员还就课程思政建设、实践教学改革等热点问题展开了热烈讨论。</p>
+            `
+        },
+        4: {
+            title: "马克思学院开展党史学习教育活动",
+            date: "2025-03-05",
+            author: "马克思学院",
+            views: 135,
+            image: "images/法学院党总支书记姜虹开讲“思政第一课”_1_法学院小课堂～_来自小红书网页版.jpg",
+            content: `
+                <p>为深入推进党史学习教育，传承红色基因，马克思学院组织开展了形式多样的党史学习教育活动。</p>
+                <p>活动包括专题讲座、参观红色教育基地、观看革命历史纪录片等多种形式。通过学习，师生们进一步加深了对党的历史的认识。</p>
+                <p>学院将继续把党史学习教育作为重要政治任务，融入日常教学工作中，推动形成常态化、长效化的学习机制。</p>
+            `
+        }
+    };
+
+    // 获取URL参数中的新闻ID
+    const urlParams = new URLSearchParams(window.location.search);
+    const newsId = urlParams.get('id');
+
+    // 如果找到对应的新闻，则更新页面内容
+    if (newsId && newsData[newsId]) {
+        const news = newsData[newsId];
+        document.title = `${news.title} - 马克思学院`;
+        document.querySelector('h1').textContent = news.title;
+        document.querySelector('.news-meta').innerHTML = `
+            <span><i class="bi bi-calendar3"></i> 发布时间：${news.date}</span>
+            <span class="mx-3"><i class="bi bi-person"></i> 作者：${news.author}</span>
+            <span><i class="bi bi-eye"></i> 浏览次数：${news.views}</span>
+        `;
+        document.querySelector('.news-content').innerHTML = `
+            <img src="${news.image}" class="news-image" alt="${news.title}">
+            ${news.content}
+        `;
+
+        // 更新上一篇下一篇链接
+        const prevId = newsId > 1 ? newsId - 1 : null;
+        const nextId = newsId < Object.keys(newsData).length ? Number(newsId) + 1 : null;
+        
+        const prevLink = document.querySelector('.btn-outline-secondary:first-child');
+        const nextLink = document.querySelector('.btn-outline-secondary:last-child');
+        
+        if (prevId && newsData[prevId]) {
+            prevLink.href = `news-detail.html?id=${prevId}`;
+            prevLink.classList.remove('disabled');
+        } else {
+            prevLink.classList.add('disabled');
+        }
+        
+        if (nextId && newsData[nextId]) {
+            nextLink.href = `news-detail.html?id=${nextId}`;
+            nextLink.classList.remove('disabled');
+        } else {
+            nextLink.classList.add('disabled');
+        }
+    }
+    </script>
 </body>
 </html> 
